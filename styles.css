@@ -23,6 +23,9 @@ body{
     font-weight: bold;
     font-size: 32px;
 }
+.thelogo:hover{
+    color: #22d3ee;
+}
 .header{
     grid-column: 2;
     grid-row: 1;
@@ -136,4 +139,7 @@ body{
     place-items: center;
     padding: 20px;
     font-size: 20px;
+}
+.sidebar ul > li:hover{
+    color: #0891b2;
 }
