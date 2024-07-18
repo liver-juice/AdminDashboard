@@ -1,0 +1,9 @@
+what.
+
+the trending and announcement section is connected to the content grid, yet it 
+overflows past the center section into the right hand side grid.
+we should:
+sepperate it from the content and put it back in the main grid that splits
+everthing under the header into 3 secstions, left main and right. put it in the right.
+we can also set the three buttons up there. that way we have the icons, announcements,
+trending and the buttons all lined up nicely in the right hand section.

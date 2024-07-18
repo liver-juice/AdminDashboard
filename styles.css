@@ -69,7 +69,7 @@ body{
 
 
 .subheader{
-    grid-column: 2/4;
+    grid-column: 2;
     grid-row: 2;
 
     display: grid;
@@ -117,14 +117,22 @@ body{
     justify-content: center;
 }
 .subheaderbuttons button{
+    /*
     background-color: #0891b2;
     border:none;
     padding: 10px 20px;
     margin: 20px;
     border-radius: 16px;
+    */
+    border: none;
+    background-color: #222225;
+    color:#6b7280;
+    padding: 10px 10px;
+    border-bottom: 1px solid #0891b2;
 }
 .subheaderbuttons button:hover{
-    background-color: #22d3ee;
+    background-color: #0890b269;
+    color:#d1d5db;
 }
 
 
@@ -149,11 +157,11 @@ body{
 }
 
 .content{
-    grid-column: 2/4;
+    grid-column: 2;
     grid-row: 3;
     background-color: #27272a;
 
-
+    box-shadow: 1px 1px 5px black;
     display: grid;
     grid-template-rows: 1fr 10fr;
     padding-left: 20px;
@@ -166,16 +174,14 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
-.announcementtitle{
-    margin-left: 280px;
-}
 
 .contentcontainer{
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
     padding-bottom: 64px;
+    padding-right: 16px;
 }
 .card-card1{
     grid-column: 1;
@@ -201,28 +207,11 @@ body{
     grid-column: 2;
     grid-row: 3;
 }
-.announcementcontainer{
-    grid-column: 3;
-    grid-row: 1/4;
-    padding-right: 32px;
-
-    display: grid;
-    grid-template-rows: 1fr .1fr 1fr;
-}
-.announcementgrid{
-    grid-row: 1;
-}
-.announcementcontainer > p {
-    grid-row: 2;
-}
-.trendinggrid{
-    grid-row: 3;
-}
 .card{
     background-color: #3f3f46;
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 3px 3px 5px #22d3ee54;
+    box-shadow: 3px 3px 5px #18181b;
     border: 2px solid #18181b;
     padding: 16px;
 
@@ -231,7 +220,7 @@ body{
     color: #9ca3af;
 }
 .card:hover{
-    box-shadow: 5px 5px 11px #22d3eeb2;
+    box-shadow: 0px 0px 8px #0890b294;
 }
 .cardtitle{
     font-weight: bold;
@@ -247,28 +236,130 @@ body{
 }
 .cardbuttons button{
     margin-left: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.gridd{
-    background-color: #3f3f46;
-    box-sizing: border-box;
-    border-radius: 8px;
-    box-shadow: 3px 3px 5px #22d3ee54;
+
+
+.announcementsandtrending{
+    grid-column: 3;
+    grid-row: 3;
+    height: 100%;
+
+    background-color: #27272a;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    padding-right: 32px;
+}
+
+.announcements{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    background-color: #27272a;
+    margin-top: 10px;
+}
+.trending{
+    display: grid;
+    background-color: #27272a;
+    height: 83%;
+    grid-template-rows: 1fr 6fr;
+}
+.trending > p{
+    display: grid;
+    align-content: end;
+    font-weight: bold;
+    color:#6b7280;
+    font-size: 20px;
+}
+
+.announcements > p{
+    display: grid;
+    align-content: end;
+    font-weight: bold;
+    color:#6b7280;
+    font-size: 20px;
+}
+
+.announcementcontainer{
     border: 2px solid #18181b;
+    background-color:#3f3f46;
+    border-radius: 8px;
+    height: 100%;
+    box-sizing: border-box;
     padding: 16px;
 
-}
-.gridd:hover{
-    box-shadow: 5px 5px 11px #22d3eeb2;
-}
-
-button{
-    cursor: pointer;
-}
-.announcementgrid{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
-.announcement{
+
+.trendingcontainer{
+    border: 2px solid #18181b;
+    border-radius: 8px;
+    background-color:#3f3f46;
+    box-shadow: 3px 3px 5px #18181b;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.trendingcontainer:hover, .announcementcontainer:hover{
+    box-shadow: 0px 0px 8px #0890b294;
+}
+.announcementslot{
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+.thetitle{
+    font-weight: bold;
+}
+.theannouncement{
+    font-size: 15px;
+}
+.announcementslot-middle{
+    border-bottom: 1px solid #27272a;
+    border-top: 1px solid #27272a;
+}
+
+.trendingcontainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.trend{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+}
+.trendingimg{
+    grid-row: 1/3;
+    grid-column: 1;
+    height: 90%;
+    width: 90%;
+    border-radius: 1000%;
+    display: grid;
+    place-items: center;
+}
+.username{
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 15px;
+    font-weight: 500;
+
+    display: grid;
+    align-items: end;
+    
+}
+.thetrend{
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 14px;
+
     display: grid;
 }
+
+button img{
+    height: 25px;
+}
+
